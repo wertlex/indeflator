@@ -1,0 +1,16 @@
+{
+  "name": "indeflator",
+  "version": "0.0.1",
+  "description": "flatten and unflatten objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "object",
+    "flat",
+    "flatten"
+  ],
+  "author": "",
+  "license": "ISC"
+}
