@@ -2,7 +2,8 @@
 
 const   gulp    = require('gulp'),
         eslint  = require('gulp-eslint'),
-        mocha   = require('gulp-mocha');
+        mocha   = require('gulp-mocha'),
+        using   = require('gulp-using');
 
 
 const   SOURCE  = './src',
@@ -25,7 +26,8 @@ gulp.task('test', ['lint-test'], function(){
             .pipe(mocha({reporter: 'spec'}))
             // If your test suite is not exiting it might be because you still have a lingering callback,
             // most often caused by an open database connection. You should close this connection or do the following:
-            .once('error', () => {
+            .once('error', (e) => {
+                console.log('Got error: ' + e);
                 process.exit(1);
             })
             .once('end', () => {
