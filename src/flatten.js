@@ -2,6 +2,8 @@
  * Created by wert on 20.04.16.
  */
 
+'use strict';
+
 const Types = require('./types');
 
 /** Return array of array keys: [0, 1, 2, ...] etc */
