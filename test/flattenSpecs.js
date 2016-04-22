@@ -22,4 +22,20 @@ describe("flatten", () => {
             ['age']:    input.age
         });
     });
+
+    it('should convert keys to arrays with one item for plain objects with dates', () => {
+        const input = {
+            name:   "John",
+            age:    30,
+            now:    new Date()
+        };
+
+        const output = flatten(input);
+
+        expect(output).to.be.deep.equal({
+            ['name']:   input.name,
+            ['age']:    input.age,
+            ['now']:    input.now
+        });
+    });
 });

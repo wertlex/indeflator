@@ -22,7 +22,7 @@ const Types = {
         return typeof smth === 'object';
     },
     isJSONObject: function (smth) {
-        return typeof smth === 'object' && !Array.isArray(smth);
+        return typeof smth === 'object' && !Array.isArray(smth) && !(smth instanceof Date);
     },
     isFunction: function(smth) {
         return typeof smth === 'function';
